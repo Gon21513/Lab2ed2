@@ -7,6 +7,19 @@
 
 
 #include <xc.h>
+#include "ADC.h"
+
+
+//
+uint16_t numadc; //variable para el valor del adc
+char buffer[4]; // Variable para almacenar la cadena de caracteres del valor del ADC
+
+int v1;//valor de voltaje 1 
+int v2;
+
+unsigned int unidadesv1;
+unsigned int decenasv1;
+unsigned int centenasv1;
 
 void adc_init(int channel){
 
@@ -212,3 +225,12 @@ int get_channel_ADC(){
     }
     return 0xff;
 }
+
+
+
+//------------------Funcion de mapeado--------------------------
+
+int map(int value, int inputmin, int inputmax, int outmin, int outmax) {
+    return ((value - inputmin) * (outmax - outmin)) / (inputmax - inputmin) + outmin;
+}
+

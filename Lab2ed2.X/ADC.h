@@ -30,4 +30,12 @@ int read_ADC();
 void change_channel_ADC(int channel);
 int get_channel_ADC();
 
+
+//--------------mapeo de variables----------------------
+
+// Funcion para mapeo
+int map(int value, int inputmin, int inputmax, int outmin, int outmax);
+
+
+
 #endif // ADC_H
