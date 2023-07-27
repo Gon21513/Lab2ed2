@@ -16,27 +16,43 @@
 #endif
 
 #ifndef RS
-#define RS PORTDbits.RD2
+#define RS PORTDbits.RD7
 #endif
 
 #ifndef EN
-#define EN RD3
+#define EN RD6
 #endif
 
-#ifndef D4
-#define D4 RD4
+#ifndef B0
+#define B0 RB0
 #endif
 
-#ifndef D5
-#define D5 RD5
+#ifndef B1
+#define B1 RB1
 #endif
 
-#ifndef D6
-#define D6 RD6
+#ifndef B2
+#define B2 RB2
 #endif
 
-#ifndef D7
-#define D7 RD7
+#ifndef B3
+#define B3 RB3
+#endif
+
+#ifndef B4
+#define B4 RB4
+#endif
+
+#ifndef B5
+#define B5 RB5
+#endif
+
+#ifndef B6
+#define B6 RB6
+#endif
+
+#ifndef B7
+#define B7 RB7
 #endif
 
 #include <xc.h> // include processor files - each processor file is guarded.  
