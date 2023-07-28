@@ -23,7 +23,7 @@ unsigned int centenasv1;
 
 void adc_init(int channel){
 
-    ADCON0bits.ADCS = 0b01 ; ///fosc/8
+    ADCON0bits.ADCS = 0b10 ; ///fosc/32
     ADCON0bits.CHS = 0b0000; ///chs 0000 an0 selecciona canal
     //ADCON0bits.CHS = 0001///chs 0001 an0 selecciona canal    
     ///////CONFIGURACIN DEL ADC

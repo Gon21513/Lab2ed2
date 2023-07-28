@@ -10,11 +10,12 @@
 #include "uart.h"
 
 void UART_TX_config(uint16_t baudrate){ 
+
     if (baudrate == 9600){
         TXSTAbits.SYNC = 0; // Modo asincrónico
         TXSTAbits.BRGH = 1; // Alta velocidad de baudios
 
-        BAUDCTLbits.BRG16 = 0; // Utilizar 16 bits para el baud rate
+        BAUDCTLbits.BRG16 = 1; // Utilizar 16 bits para el baud rate
 
         //puede ser 51
         SPBRG = 25; // Configurar el valor del registro de baudios a 9615 (para una velocidad específica)
@@ -29,10 +30,14 @@ void UART_TX_config(uint16_t baudrate){
 void UART_RX_config(uint16_t baudrate){
     if (baudrate == 9600){
         RCSTAbits.SPEN = 1; // Habilitar la comunicación serial
+        //PIR1bits.TXIF = 0;
+
         RCSTAbits.RX9 = 0; // Deshabilitar el bit de noveno bit de dirección
         RCSTAbits.CREN = 1; // Habilitar la recepción
 
     }
     
 }
+
+
 
